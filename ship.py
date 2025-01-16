@@ -26,15 +26,6 @@ class Ship(ABC):
 
         :param destination: Название пункта назначения.
         :type destination: str
-
-        Пример:
-        >>> class CargoShip(Ship):
-        ...     def sail(self, destination: str) -> None:
-        ...         print(f"Корабль '{self.name}' отправляется в {destination}.")
-        ...
-        >>> ship = CargoShip(name="Титан", tonnage=5000)
-        >>> ship.sail("Сингапур")
-        Корабль 'Титан' отправляется в Сингапур.
         """
         pass
 
@@ -42,15 +33,6 @@ class Ship(ABC):
     def dock(self) -> None:
         """
         Швартует корабль.
-
-        Пример:
-        >>> class CargoShip(Ship):
-        ...     def dock(self) -> None:
-        ...         print(f"Корабль '{self.name}' пришвартован.")
-        ...
-        >>> ship = CargoShip(name="Титан", tonnage=5000)
-        >>> ship.dock()
-        Корабль 'Титан' пришвартован.
         """
         pass
 
@@ -62,14 +44,5 @@ class Ship(ABC):
         :param weight: Вес груза в тоннах.
         :type weight: float
         :raises ValueError: Если вес превышает грузоподъемность корабля.
-
-        Пример:
-        >>> class CargoShip(Ship):
-        ...     def load_cargo(self, weight: float) -> None:
-        ...         print(f"Загружено {weight} тонн.")
-        ...
-        >>> ship = CargoShip(name="Титан", tonnage=5000)
-        >>> ship.load_cargo(3000)
-        Загружено 3000 тонн.
         """
         pass
