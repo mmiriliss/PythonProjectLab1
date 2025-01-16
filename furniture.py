@@ -24,10 +24,3 @@ class Furniture(ABC):
         :return: Описание в виде строки.
         """
         ...
-
-class Chair(Furniture):
-    def move(self, new_location: str) -> None:
-        print(f"Мебель перемещена в {new_location}.")
-
-    def get_description(self) -> str:
-        return f"Мебель из материала {self.material} весом {self.weight} кг."

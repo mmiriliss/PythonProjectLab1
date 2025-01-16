@@ -23,10 +23,3 @@ class Design(ABC):
         :return: Список цветов.
         """
         ...
-
-class ModernDesign(Design):
-    def apply_to_room(self, room: str) -> None:
-        print(f"Дизайн {self.style} применен к комнате {room}.")
-
-    def get_palette(self) -> List[str]:
-        return self.colors
